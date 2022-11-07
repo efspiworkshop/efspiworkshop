@@ -1,24 +1,28 @@
 ---
-title: "EFSPI regulatory statistics workshop"
-author: "Kaspar Rufibach"
-date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
+title: " "
 output: 
   rmarkdown::html_document:
     highlight: pygments
-    number_sections: yes
+    number_sections: no
     self_contained: yes
     toc: no
     toc_depth: 2
     toc_float: yes
 ---
 
-# Purpose of this site
+<br><br>
 
-This site collects links and some materials for the organization of the yearly EFSPI regulatory statistics workshop.
+<center>![](efspi_logo.jpg)</center>
 
-# Who to provide feedback to
+<br><br>
 
-For feedback on this page send an email to [Kaspar Rufibach](mailto:kaspar.rufibach@roche.com).
+# EFSPI regulatory statistics workshop
+
+On this webpage you find links and materials for the yearly EFSPI regulatory statistics workshop in Basel. The date for the 2023 issue has already been announced, find details [here](next.html).
+
+The workshop is organized by [EFSPI](www.efspi.org).
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
 
 
 

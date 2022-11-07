@@ -4,6 +4,8 @@ navbar:
   title: "EFSPI regulatory statistics workshop"
   type: inverse
   left:
+    - text: "2023 workshop"
+      href: next.html
     - text: "Instructions and FAQs"
       menu:
         - text: "Registration"
