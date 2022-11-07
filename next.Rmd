@@ -1,6 +1,5 @@
 ---
 title: "2023 EFSPI regulatory statistics workshop"
-author: "Kaspar Rufibach"
 date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
 output: 
   rmarkdown::html_document:
