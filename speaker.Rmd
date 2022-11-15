@@ -43,6 +43,7 @@ This document provides necessary information for contributors to the workshop. F
 local[, "email"] <- paste("[", local[, "Name"], "](mailto:", local[, "email"], ")", sep = "")
 kable(local[, c("Name", "email")], align = "ll")
 ```
+
 # Program
 
 `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
@@ -120,7 +121,7 @@ Panels for poster presenters will be available. Poster should be the usual stand
 
 # Questions?
 
-Email your session chairs or [Kaspar Rufibach](mailto:kaspar.rufibach@roche.com).
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
 
 
 

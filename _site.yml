@@ -6,6 +6,8 @@ navbar:
   left:
     - text: "2023 workshop"
       href: next.html
+    - text: "2022 Scientific Committee"
+      href: scicom.html
     - text: "Past workshops: programs, slidedecks, recordings"
       href: past.html
   output:
