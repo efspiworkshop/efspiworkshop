@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - feedback.qmd        
+    - index.qmd           
+    - next.qmd            
+    - past.qmd            
+    - past_scicom.qmd     
+    - registration_faq.qmd
+    - scicom.qmd          
+    - speaker.qmd                                     
+    
+website:
+  title: "EFSPI regulatory statistics workshop"
+  navbar:
+    background: info
+    left:
+    - text: "2023 workshop"
+      href: next.html
+    - text: "2022 Scientific Committee"
+      href: scicom.html
+    - text: "Past workshops: programs, slidedecks, recordings"
+      href: past.html
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: source
+
+

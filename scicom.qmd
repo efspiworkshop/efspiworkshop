@@ -1,0 +1,57 @@
+---
+title: "Scientific Committee"
+date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+local <- as.data.frame(read_excel(paste(path, "/data/local.xlsx", sep = ""), col_types = NULL))
+sci <- as.data.frame(read_excel(paste(path, "/data/scicom.xlsx", sep = ""), col_types = NULL))
+sci <- arrange(sci, desc(Type), Gender)
+
+# last issue 
+last <- 2021
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Scientific Committee
+
+In `r last` the members of the scientific committee were:
+
+```{r, include=TRUE, echo=FALSE}
+kable(select(sci, -Local, -SciCom), align = "llccl")
+```
+
+See also the `r paste("[program of ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`.
+
+# Local organizing Committee
+
+The members of the local organizing committee are:
+
+```{r, include=TRUE, echo=FALSE}
+kable(select(filter(sci, Local == 1), -Local, -SciCom), align = "llccl")
+```
+
+# Questions?
+
+For feedback and questions send an email to [info@efspiworkshop.org](mailto:info@efspiworkshop.org).
+
+
+

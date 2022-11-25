@@ -1,0 +1,104 @@
+---
+title: "Registration for EFSPI regulatory statistics workshop: Frequently asked questions"
+date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  rmarkdown::html_document:
+    highlight: pygments
+    number_sections: yes
+    self_contained: yes
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+---
+
+```{r setup, include = FALSE, echo = FALSE}
+## load packages
+packs.html <- c("knitr", "pander", "reporttools", "dplyr", "readxl")
+for (i in 1:length(packs.html)){library(packs.html[i], character.only = TRUE)}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+## read in data
+path <- getwd()
+past <- as.data.frame(read_excel(paste(path, "/data/past.xlsx", sep = ""), col_types = NULL))
+reg <- as.data.frame(read_excel(paste(path, "/data/registration.xlsx", sep = ""), col_types = NULL))
+
+# last issue 
+last <- 2021
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
+```
+
+# Introduction
+
+Thanks for your interest in the `r paste("[EFSPI regulatory statistics workshop ", last + 1, "](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")`! This site provides FAQs around registration. 
+
+# Venue
+
+The event will take place at the [Biozentrum Basel](https://www.biozentrum.unibas.ch/). The exact address is Spitalstrasse 41, Basel and directions are [here](https://www.biozentrum.unibas.ch/directions).
+
+The venue has free WLAN, just connect to _Unibas visitor_. It will ask for your mobile phone number for confirmation.
+
+# Program and registration
+
+Links to `r paste("[program](", past[past[, "Year"] == last + 1, "Program"], ")", sep = "")` and `r paste("[registration](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")`.
+
+# Registration deadline 
+
+For virtual attendance: **`r colFmt("13th September 2022 EOB")`**.
+
+Registration for face-to-face attendance has been closed.
+
+# Covid
+
+Currently, no measures are in effect in Switzerland. All events (including wine tasting) are planned indoors at the moment. However, the situatio is of course subject to potential changes. We will post these in case the situation changes.
+
+# What block booking options are available for companies?
+
+Our offer for a block booking for companies is as follows:
+
+- Block booking for face-to-face attendance: 7500 Euro, i.e. you break-even with 30 face-to-face participants. If you chose this option an arbitrary number of virtual attendees is included as well.
+- Block booking for virtual attendance: 2000 Euro, i.e. you reach break-even with this option if at least 40 colleagues from your company register for virtual attendance to the workshop.
+
+Please reach out to [Egbert Biesheuvel](mailto:egbert.biesheuvel@viatris.com) if your company is interested in this option.
+
+# Which companies have block bookings for face-to-face participation?
+
+Roche and Novartis have a comprehensive block booking agreement with the workshop, i.e. all colleagues working at these companies do not need to pay a registration fee for face-to-face or virtual participation.
+
+# My company (Roche, Novartis) has a block booking for face-to-face AND virtual participation. How do I register?
+
+These companies have a block booking for face-to-face and virtual attendance. You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate face-to-face or virtual attendance. You do not need to pay a registration fee, this is covered by your company via the block booking.
+
+To get access to lunches and the wine tasting event, please tick the meals/event you plan to attend. We ask you to be as accurate as possible in indicating your presence - this is for organizational purposes. 
+
+# My company (Bayer, BMS) has a block booking for virtual participation only. How do I register?
+
+You simply register via `r paste("[this form](", reg[reg[, "Year"] == last + 1, "Registration"], ")", sep = "")` and indicate virtual attendance. You do not need to pay a registration fee, this is covered by your company via a block booking.
+
+# My company (Bayer, BMS) has a block booking for virtual attendance only. I still want to attend face-to-face. How much do I need to pay?
+
+The full registration fee, 250 Euro.
+
+# I will not attend the full workshop and/or not all lunches. Do I get a deducation for the face-to-face registration fee?
+
+No.
+
+# I have registered for face-to-face attendance but have changed my mind and will attend only virtually. Will my registration fee be reimbursed?
+
+No. We would still very much appreciate you letting us know, for the planning of the catering.
+
+# For whom is the registration fee waived?
+
+See [here](speaker.html).
+
+# I am presenting in the short topic session. Is my registration fee waived?
+
+No.
+
+# You still have questions after going through this entire document?
+
+Send an email [Kaspar Rufibach](mailto:kaspar.rufibach@roche.com).
+
+
+
