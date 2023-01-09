@@ -1,6 +1,5 @@
 ---
 title: "2023 EFSPI regulatory statistics workshop"
-date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
 output: 
   rmarkdown::html_document:
     highlight: pygments
@@ -17,7 +16,7 @@ The workshop will take place on 13/14th September 2023 again in the beautiful [B
 
 <center>![](biozentrum.jpg)</center>
 
-<br><br>
+<br>
 
 Members of [local organizing committee](local.html).
 
