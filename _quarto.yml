@@ -10,7 +10,8 @@ project:
     - registration_faq.qmd
     - scicom.qmd  
     - local.qmd
-    - speaker.qmd                                     
+    - speaker.qmd   
+    - updates.qmd
     
 website:
   title: "EFSPI regulatory statistics workshop"
@@ -27,6 +28,8 @@ website:
           href: scicom.html
     - text: "Past workshops: programs, slidedecks, recordings"
       href: past.html
+    - text: "Updates"
+      href: updates.html
 
 format:
   html:
