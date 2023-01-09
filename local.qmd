@@ -1,5 +1,5 @@
 ---
-title: "Scientific Committee"
+title: "Local organizing Committee"
 date: "Last change: `r format(Sys.time(), '%d %B, %Y')`"
 output: 
   rmarkdown::html_document:
@@ -26,25 +26,27 @@ sci22 <- arrange(sci22, desc(Type), Gender)
 
 sci23 <- as.data.frame(read_excel(paste(path, "/data/2023/scicom2023.xlsx", sep = ""), col_types = NULL))
 sci23 <- arrange(sci23, desc(Type), Gender)
+
+source(paste(path, "/functions/colFmt.r", sep = ""))
 ```
 
 # 2023
 
-In 2023 the members of the scientific committee are:
+The members of the local organizing committee in 2023 are:
 
 ```{r, include=TRUE, echo=FALSE}
-kable(select(sci23, -Local, -SciCom, -email), align = "llccl")
+sci23[, "Name"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")
+sci23[, "email"] <- paste("[", sci23[, "First"], " ", sci23[, "Last"], "](mailto:", sci23[, "email"], ")", sep = "")
+kable(filter(sci23, Local == 1)[, c("First", "Last", "Type", "Affiliation", "email")], align = "ll")
 ```
 
 # 2022
 
-In 2022 the members of the scientific committee were:
+The members of the local organizing committee in 2022 were:
 
 ```{r, include=TRUE, echo=FALSE}
-kable(select(sci22, -Local, -SciCom, -email), align = "llccl")
+kable(select(filter(sci22, Local == 1), -Local, -SciCom, -email, -Gender), align = "llccl")
 ```
-
-See also the `r paste("[program of ", 2022, "](", past[past[, "Year"] == 2022, "Program"], ")", sep = "")`.
 
 # Questions?
 

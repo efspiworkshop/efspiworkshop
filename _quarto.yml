@@ -8,7 +8,8 @@ project:
     - past.qmd            
     - past_scicom.qmd     
     - registration_faq.qmd
-    - scicom.qmd          
+    - scicom.qmd  
+    - local.qmd
     - speaker.qmd                                     
     
 website:
@@ -18,8 +19,12 @@ website:
     left:
     - text: "2023 workshop"
       href: next.html
-    - text: "2022 Scientific Committee"
-      href: scicom.html
+    - text: "Committees"
+      menu:
+        - text: "Local organizing committee"
+          href: local.html
+        - text: "Scientific committee"
+          href: scicom.html
     - text: "Past workshops: programs, slidedecks, recordings"
       href: past.html
 
